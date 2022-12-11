@@ -146,6 +146,7 @@
     .list {
       padding: 20px 10px;
       &:nth-child(1){
+        overflow-y: auto;
         max-width: 300px;
       }
       li {
@@ -161,6 +162,16 @@
           color: white;
           @include v.background;
         }
+      }
+    }
+    .preview {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+      img {
+        width: 300px;
+        height: 300px;
       }
     }
     .close {

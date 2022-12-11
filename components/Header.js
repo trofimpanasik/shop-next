@@ -2,6 +2,7 @@ import {useState} from "react";
 import Image from "next/image";
 import styles from "../styles/Header.module.scss";
 import logo from "../public/logo.png";
+import preview from "../public/pull.png";
 import russia from "../public/russia.png";
 import {BiMap} from "react-icons/bi";
 import {AiOutlineClose, AiOutlineSearch} from "react-icons/ai";
@@ -11,6 +12,7 @@ import {RiAccountCircleLine} from "react-icons/ri";
 export default function Header() {
   const [menu, setMenu] = useState(false);
   const [dopMenu, setDopMenu] = useState(false);
+  const [item, setItem] = useState(false);
   return (
     <header className={styles.parent}>
       <div className={styles.upper}>
@@ -109,7 +111,7 @@ export default function Header() {
           </li>
         </ul>
         {dopMenu && <ul className={styles.list}>
-          <li>
+          <li onMouseEnter={() => setItem(true)}>
             Бассейны
           </li>
           <li>
@@ -125,7 +127,12 @@ export default function Header() {
             Уход за бассейном
           </li>
         </ul>}
-        {menu && <AiOutlineClose className={styles.close} onClick={() => {setMenu(false); setDopMenu(false)}}/>}
+        {item &&
+          <div className={styles.preview}>
+            <Image width={400} height={400} alt={'preview'} src={preview}/>
+          </div>
+        }
+        {menu && <AiOutlineClose className={styles.close} onClick={() => {setMenu(false); setDopMenu(false); setItem(false)}}/>}
       </div>
     </header>
   )
