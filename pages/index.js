@@ -3,6 +3,15 @@ import banner from '../public/banner.png'
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import Container from "../components/Container";
+import img1 from '../public/img1.png'
+import img2 from '../public/img2.png'
+import img3 from '../public/img3.png'
+import img4 from '../public/img4.png'
+import img5 from '../public/img5.png'
+import img6 from '../public/img6.png'
+import img7 from '../public/img7.png'
+import img8 from '../public/img8.png'
+
 // import { PrismaClient } from '@prisma/client'
 // const prisma = new PrismaClient()
 
@@ -59,8 +68,8 @@ export default function Home() {
       </div>
       <div className={styles.sales}>
         {
-          [1,2,3,4,5,6,7,8].map((item, index) => {
-            return <Image src={`/../public/img${item}.png`} alt={'img'} width={300} height={200}/>
+          [img1,img2,img3,img4,img5,img6,img7,img8].map((item, index) => {
+            return <Image src={item} alt={'img'} width={300} height={200}/>
           })
         }
       </div>
