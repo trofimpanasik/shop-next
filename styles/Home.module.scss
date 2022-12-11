@@ -1,0 +1,72 @@
+.parent {
+  .banner {
+    margin: 20px 0;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .sales {
+    display: grid;
+    margin: 20px 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 1.5em;
+    img {
+      width: 100%;
+      cursor: pointer;
+      height: auto;
+    }
+  }
+  h2 {
+    margin: 20px 0;
+  }
+  .list {
+    margin-top: 20px;
+    display: flex;
+    .item {
+      margin-right: 20px;
+      max-width: 100px;
+      .prices {
+        display: flex;
+        margin-bottom: 5px;
+        justify-content: space-between;
+        align-items: center;
+        .newPrice {
+          font-weight: 500;
+          color: #000;
+        }
+        .oldPrice {
+          font-size: .8em;
+          color: #737373;
+          text-decoration: line-through;
+        }
+      }
+      .image {
+        background-color: #cbd5e2;
+        width: 100%;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        height: 150px;
+      }
+      .description {
+        font-size: .8em;
+        color: #737373;
+      }
+    }
+  }
+  .categories {
+    .items {
+      display: grid;
+      margin: 20px 0;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
+      row-gap: 1.5em;
+      img {
+        width: 100%;
+        cursor: pointer;
+        height: auto;
+      }
+    }
+  }
+}

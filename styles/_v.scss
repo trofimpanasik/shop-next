@@ -1,0 +1,50 @@
+@mixin background {
+  background: linear-gradient(90deg, #2A7ED8 0%, #4A66AF 36.46%, #2A7ED8 70.83%, #4A66AF 100%);
+}
+@mixin fadeInFadeOut($activeClassName, $animationStartPosition) {
+  $animationEndPosition: $animationStartPosition + 10px;
+  @keyframes fadeOut {
+    from {
+      top: $animationStartPosition;
+    }
+    to {
+      top: $animationEndPosition;
+    }
+  }
+  transition-duration: 0.4s;
+  animation: fadeOut 0.4s;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  right: 0;
+  top: $animationStartPosition;
+  border-radius: 5px;
+  background-color: var(--popUp);
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, .24) 0px 3px 8px;
+  box-sizing: border-box;
+  z-index: 10;
+  &.#{$activeClassName} {
+    @keyframes fadeIn {
+      from {
+        top: $animationEndPosition;
+      }
+      to {
+        top: $animationStartPosition;
+      }
+    }
+    animation: fadeIn 0.4s;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    width: 7px;
+    background-color: var(--formBack);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--children);
+  }
+}
