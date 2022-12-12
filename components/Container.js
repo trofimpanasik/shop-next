@@ -6,8 +6,6 @@ export default function Container({children, className}) {
       <div className={styles.container}>
         {children}
       </div>
-      <div className={styles.top}></div>
-      <div className={styles.bottom}></div>
     </div>
   )
 }

@@ -1,11 +1,11 @@
-@use 'v';
-
 .footer {
   padding: 30px 30px;
-  @include v.background;
   color: white;
+  h3 {
+    color: #275080;
+  }
   p {
-    color: #cde2ef;
+    color: #275080;
     margin: 10px 0;
   }
   div {
