@@ -11,6 +11,8 @@ import img5 from '../public/img5.png'
 import img6 from '../public/img6.png'
 import img7 from '../public/img7.png'
 import img8 from '../public/img8.png'
+import category1 from '../public/category1.png'
+import category2 from '../public/category2.png'
 
 // import { PrismaClient } from '@prisma/client'
 // const prisma = new PrismaClient()
@@ -96,8 +98,8 @@ export default function Home() {
       </div>
       <div className={styles.sales}>
         {
-          [1,2,3,4,5,6,7,8].map((item, index) => {
-            return <Image src={`/../public/img${item}.png`} alt={'img'} width={300} height={200}/>
+          [img1,img2,img3,img4,img5,img6,img7,img8].map((item, index) => {
+            return <Image src={item} alt={'img'} width={300} height={200}/>
           })
         }
       </div>
@@ -105,8 +107,8 @@ export default function Home() {
         <h2>Популярные категории</h2>
         <div className={styles.items}>
           {
-            [1,2].map((item, index) => {
-              return <Image src={`/../public/category${item}.png`} alt={'img'} width={1000} height={200}/>
+            [category1,category2].map((item, index) => {
+              return <Image src={item} alt={'img'} width={1000} height={200}/>
             })
           }
         </div>
