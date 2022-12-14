@@ -112,9 +112,6 @@ export default function Header() {
         </ul>
         {dopMenu && <ul className={styles.list}>
           <li onMouseEnter={() => setItem(true)}>
-            Бассейны
-          </li>
-          <li>
             Каркасные бассейны
           </li>
           <li>
